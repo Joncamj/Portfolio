@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nom": "Axiome solution",
+        "date": "mai-juin 2021 (6 semaines)",
+        "lieu": "Bidart",
+        "text": "stage de seconde, création d’un site web sur Wordpress"
+    },
+    {
+        "id": 2,
+        "nom": "Luz elec",
+        "date": "9 janvier au 3 février 2023",
+        "lieu": "St jean de luz",
+        "text": "stage de 1ère, câblage RJ45, installation d’interrupteurs"
+    },
+    {
+        "id": 3,
+        "nom": "IzarLink",
+        "date": "30 octobre - 22 décembre 2022",
+        "lieu": "Bidart",
+        "text": "stage de terminale, programmation de routeurs, adressage IP"
+    }
+]
