@@ -1,26 +1,6 @@
-// function bgb() {
-//     document.querySelector("body").style.backgroundColor = "rgb(235, 235, 235)";
-//     document.querySelector("button").style.backgroundColor = "rgb(61, 61, 61)"
-//     document.querySelector("button").style.color = "white"
-//     document.querySelector("body").style.color = "black";
-//     document.querySelector(".fleche img").style.invert = "none";
-// }
+import createBtn from "./btn.js";
 
-function saveTheme(theme) {
-    document.body.className = theme;
-    localStorage.setItem("theme", theme)
-};
-
-function toggleTheme() {
-    const current = document.body.className;
-    const next = current === "dark" ? "light" : "dark";
-    saveTheme(next)
-};
-
-window.onload = () => {
-    const savedTheme = localStorage.getItem ("theme") || "dark";
-    saveTheme(savedTheme)
-}
+createBtn()
 
 
 fetch('stages.json')
@@ -51,4 +31,12 @@ function mesStages(listeStages) {
         `
         stage.appendChild(div)
     });
+}
+
+window.onscroll = function scrollFunction() {
+    if (document.documentElement.scrollTop > 100) {
+        document.getElementById("stage").className = "slideUp";
+    } if (document.documentElement.scrollTop > 1000) {
+        document.getElementById("model").className = "slideLeft";document.getElementById("jeu").className = "slideRight";
+    }
 }

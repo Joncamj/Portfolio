@@ -7,7 +7,22 @@
     <link rel="shortcut icon" href="./img/975bb8180336509.650951d33fae9.gif" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<header>
+    <h1>Mon portfolio</h1>
+    
+    <section class="nav" id="nav">
+        <nav>
+            <ul>
+                <li><a href="#moi">Moi</a></li>
+                <li><a href="#experiences">Mes experiences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#lobby">Lobby</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<body id="bod">
     <div class="sak">
         <img src="" alt="">
     </div>
@@ -16,24 +31,7 @@
         <a href="#top"><img src="./img/flèche.webp" alt=""></a>
     </div>
     
-    <header>
-        <h1>Mon portfolio</h1>
-        <div>
-            
-        </div>
-        
-    </header>
-    <section class="nav">
-        <nav>
-            <ul>
-                <a href="#moi">Moi</a>
-                <a href="#experiences">Mes experiences</a>
-                <a href="#projets">Projets</a>
-                <a href="#lobby">Lobby</a>
-            </ul>
-        </nav>
-    </section>
-    <button class="theme-toggle" id="btnBW" onclick="toggleTheme()">Black/White</button>
+
     <section id="moi">
         <h2>&#8213;&#8213;&#8213;&#8213; Moi &#8213;&#8213;&#8213;&#8213;</h2>
         <div class="moi">
@@ -44,7 +42,7 @@
             <h3>Prénom : Jon</h3>
             <h3>Age : 18 ans</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laboriosam quibusdam dicta voluptatibus deleniti? Sapiente dolorem maxime quaerat ipsam quidem voluptate minus nemo odit eligendi in, doloribus rerum, corporis laudantium!
+                Je m'appelle Jon Camjuzan, j'ai 18 ans et je me forme au développement d'applications web. J'apprends à créer des sites interactifs et modernes en utilisant HTML, CSS et JavaScript. Curieux et motivé, je développe mes compétences pour concevoir des interfaces efficaces et responsives.
             </p>
         </div>
         </div>
@@ -72,9 +70,6 @@
                     <h6>22 octobre au 21 janvier 2025, Bayonne</h6>
                     <p>Conception, mise en ligne de sites vitrines, applications mobiles et boutique en ligne sur Wordpress</p>
                     </div>
-                    <div class="carre">
-                        <img src="./img/y23i0mjsdlkc1.gif" alt="">
-                    </div>
                 </div>
             </div>
             
@@ -89,9 +84,15 @@
     <section id="projets" class="titre">        
         <h2>&#8213;&#8213;&#8213;&#8213; Projets &#8213;&#8213;&#8213;&#8213;</h2>
         <div class="pro">
-            <h3>Projet 1</h3>
-            <h3>Projet 2</h3>
-            <h3>Projet 3</h3>
+            <div class="jv">
+            <h3>Jeux vidéo</h3>
+            <p>Je travaille actuellement sur un projet de création de jeu vidéo dans un univers fantaisiste mêlant action et exploration. Il s’agit d’un FPS (First Person Shooter) en monde ouvert, où le joueur incarne un héros évoluant dans un univers magique et dangereux, rempli de créatures surnaturelles, de quêtes, et de secrets à découvrir. L’objectif est de proposer une expérience immersive, mêlant combat à distance, liberté d’exploration, et ambiance narrative riche. Ce projet me permet d’appliquer mes compétences en développement web et de me former à la logique de gameplay, à la conception d’environnements interactifs, et à l’intégration d’éléments visuels et sonores.</p>
+            </div>
+            <div class="mv">
+               <h3>Marque de vêtement</h3>
+               <p>Je développe actuellement une marque de vêtements streetwear qui reflète l’identité urbaine, la créativité et l’attitude indépendante de ma génération. Inspirée par la culture skate, le hip-hop et les codes graphiques modernes, la marque propose des pièces uniques alliant style, confort et expression personnelle. Chaque vêtement est pensé comme un support artistique : logos marquants, messages engagés et designs minimalistes ou percutants. À travers cette marque, je cherche à créer une communauté et une esthétique qui parle à celles et ceux qui veulent s’habiller autrement, avec caractère et authenticité.</p>
+            </div>
+            
         </div>
 
     </section>
@@ -100,17 +101,19 @@
     <section id="lobby" class="titre">
         <h2>&#8213;&#8213;&#8213;&#8213; Lobby &#8213;&#8213;&#8213;&#8213;</h2>
         <div class="lobby">
-            <div class="model">
+            <div class="model" id="model">
                 <h4>Modelisation 3D</h4>
-                <img src="./img/975bb8180336509.650951d33fae9.gif" alt="masse liquide animé">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis numquam ut natus nostrum quas, perspiciatis quaerat asperiores molestiae eum voluptate dolores cum nam quis optio iste aliquam blanditiis accusantium sed!
+                Dignissimos vitae, consequuntur animi odit similique deleniti culpa ut, explicabo numquam blanditiis doloremque, totam natus officiis nisi tempore sequi autem dolorem. Non provident accusamus molestias doloribus eveniet neque, aliquam rem?</p>
             </div>
-            <div class="jeu">
+            <div class="jeu" id="jeu">
                 <h4>Passionné par les jeux video</h4>
-                <img src="./img/photofunky.gif" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis numquam ut natus nostrum quas, perspiciatis quaerat asperiores molestiae eum voluptate dolores cum nam quis optio iste aliquam blanditiis accusantium sed!
+                Dignissimos vitae, consequuntur animi odit similique deleniti culpa ut, explicabo numquam blanditiis doloremque, totam natus officiis nisi tempore sequi autem dolorem. Non provident accusamus molestias doloribus eveniet neque, aliquam rem?</p>
             </div>
         </div>
     </section>
     
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>

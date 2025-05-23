@@ -6,24 +6,38 @@ html {
     scroll-behavior: smooth;
 }
 
+:root{
+    --text-bg: rgb(74, 255, 150);
+    --bg-dark: #3d3d3d;
+    --bg-light: rgb(255, 255, 255);
+    --color-black: black;
+    --color-white: aliceblue;
+}
+
 body{
     margin: 0;
-    background-color: rgb(61, 61, 61);
+    background-color: var(--bg-dark);
     width: 100%;
     background-image: url(/img/0ba615c61eab2b7aafd82c98f27c0305_w200.gif);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: aliceblue;
+    color: var(--color-white);
 }
+
+body.light {
+    background-color: var(--bg-light);
+    color: var(--bg-dark);
+}
+
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--color-white);
+}
+
 
 body section{
     padding: 10px;
-}
-
-.sak{
-    scale: 10;
-    position: fixed;
 }
 
 .fleche img{
@@ -33,6 +47,11 @@ body section{
     bottom: 20px;
     right: 10px;
     scroll-behavior:smooth;
+}
+
+.fleche:hover {
+    box-shadow: 0px 0px 20px var(--bg-dark);
+    transition: 0.5s;
 }
 
 h1{
@@ -46,21 +65,31 @@ header{
 }
 
 .nav{
-    background: #56ebde;
-    color: black;
+    background: var(--text-bg);
+    color: var(--color-black);
     text-align: center;
     padding: 5px;
+    animation-name: "moveLight";
+    box-shadow: 0px 0px 20px var(--text-bg);
 }
 
 .nav ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.nav li{
+    list-style: none;
+}
 .nav ul a{
-    color: black;
+    color: var(--color-black);
     text-decoration: none;
     font-size: 1.5em;
     scroll-behavior:smooth;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
 }
 
 #btnBW {
@@ -70,7 +99,12 @@ header{
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: aliceblue;
+    background-color: rgb(7, 7, 7);
+    cursor: pointer;
+    scale: 1.5;
+    color: var(--bg-light);
+    font-weight: bold;
+    box-shadow: 10px 10px var(--bg-light);
 }
 
 h2{
@@ -89,12 +123,18 @@ h2{
     border-radius: 15px;
 }
 
+#experiences {
+    padding: 0;
+    background-image: url(http://127.0.0.1:5501/img/y23i0mjsdlkc1.gif);
+    background-size: 50em;
+}
+
 .description{
     padding: 10px;
-    border: 5px solid whitesmoke;
+    border: 5px solid var(--bg-light);
     border-radius: 20px;
     margin-left: 10px;
-    background-color: black;
+    font-size: 1.1em;
 }
 
 .formation{
@@ -120,18 +160,57 @@ h2{
     width: 100%;
 }
 
+
+.stage {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--text-bg);
+    margin: 0%;
+    margin-top: 50px;
+    padding: 10px;
+    color: var(--bg-dark);
+    box-shadow: 0px 200px 500px var(--text-bg);
+}
+
+.slideUp {
+    animation-name: slideUp;
+    animation-duration: 2s;
+    visibility: visible;
+    
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--text-bg);
+    margin: 0%;
+    margin-top: 50px;
+    padding: 10px;
+    color: var(--bg-dark);
+    box-shadow: 0px 150px 500px var(--text-bg);
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 .pro {
     display: flex;
     justify-content: space-around;
 }
 
-.stage {
-    display: flex;
-    justify-content: space-around;
-    background-color: #56ebde;
-    margin: 0%;
-    margin-top: 50px;
-    color: rgb(32, 32, 32);
+.jv{
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.mv {
+    padding: 10px;
+    font-size: 1.1em;
 }
 
 .lobby {
@@ -142,3 +221,54 @@ h2{
 .lobby img {
     width: 100%;
 }
+
+.slideLeft {
+    animation-name: slideLeft;
+    animation-duration: 2s;
+    visibility: visible;
+
+    background-color: var(--text-bg);
+    color: var(--bg-dark);
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: url(./img/975bb8180336509.650951d33fae9.gif);
+    box-shadow: 10px 10px 50px var(--text-bg);
+}
+
+@keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+
+  .slideRight {
+    animation-name: slideRight;
+    animation-duration: 2s;
+    visibility: visible;
+
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--text-bg);
+    background-image: url(./img/photofunky.gif);
+    box-shadow: -10px 10px 50px var(--text-bg);
+    color: var(--bg-dark);
+}
+
+@keyframes slideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
